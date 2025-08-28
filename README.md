@@ -205,7 +205,6 @@ environment with a Django web application that writes secrets into Vault and
 another service or job that reads them.  The proof‑of‑concept in this
 repository provides a minimal working example to get you started.
 
-## Repository name suggestion
 
 A concise and descriptive name for the Git repository is **`vault-python-poc`**.
 It reflects that the project demonstrates a Python‑based proof‑of‑concept for
