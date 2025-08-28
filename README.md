@@ -121,7 +121,7 @@ python writer.py --path=my‑secret "Hello from Vault!"
 
 You should see confirmation that the secret was written successfully.
 
-### 6. Read the secret
+### 4. Read the secret
 
 Run `reader.py` with the same path to retrieve the message:
 
@@ -137,16 +137,16 @@ The script prints `Retrieved message from Vault: Hello from Vault!`
    Vault server specified by `VAULT_ADDR`.  They authenticate using the token
    in `VAULT_TOKEN`.  Before a client can interact with Vault it must
    authenticate against an auth method to obtain a token; the policies attached
-   to the token restrict what operations the client can perform【892221880759870†L106-L122】.
+   to the token restrict what operations the client can perform.
 
 2. **Key/Value secrets engine:** The scripts interact with the KV version 2
    secrets engine mounted at `secret/`.  This engine stores arbitrary
    key/value secrets.  Version 2 supports retaining multiple versions of a
-   secret and allows you to retrieve or destroy specific versions【124859351324888†L223-L231】.
+   secret and allows you to retrieve or destroy specific versions.
 
 3. **Encryption at rest:** Vault encrypts data before storing it in its
    back‑end.  You do not see the encryption keys or algorithms; the server
-   decrypts the secret when you read it【247159539390981†L568-L617】.
+   decrypts the secret when you read it.
 
 ## Moving towards a production architecture
 
@@ -193,7 +193,7 @@ should consider the following:
 
 * **Least privilege:** Grant each application the minimum set of capabilities
   it needs.  Use separate policies and tokens for reading and writing.  This
-  limits the blast radius if a token is compromised【892221880759870†L106-L122】.
+  limits the blast radius if a token is compromised.
 
 * **Audit logs and monitoring:** Enable audit logging so that every request
   and response is recorded for forensic purposes.  Vault supports writing
