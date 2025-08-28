@@ -116,7 +116,7 @@ Use `writer.py` to store a message.  The `--path` argument specifies where
 under the `secret/` mount the data is saved.  For example:
 
 ```sh
-python writer.py --path=my‑secret "Hello from Vault!"
+python3 writer.py --path registered-users --id 0 --api-secret 123456
 ```
 
 You should see confirmation that the secret was written successfully.
@@ -126,7 +126,7 @@ You should see confirmation that the secret was written successfully.
 Run `reader.py` with the same path to retrieve the message:
 
 ```sh
-python reader.py --path=my‑secret
+python3 reader.py --path registered-users
 ```
 
 The script prints `Retrieved message from Vault: Hello from Vault!`
